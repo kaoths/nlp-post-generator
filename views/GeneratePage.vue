@@ -23,7 +23,7 @@ export default class GeneratePage extends Vue {
   private inputText = ''
   private generatedTexts: string[] = []
   async generate() {
-    const { data } = await this.$axios.post('title_gen/', {
+    const { data } = await this.$axios.post('title_gen', {
       title: this.inputText
     })
     this.generatedTexts = data
